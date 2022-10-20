@@ -1,0 +1,25 @@
+---
+title: "My awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Emily's awesome website
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+Here's some text. I use [google](https://translate.google.com/) to do data science.
+
+This is a photo of Daisy:
+<img src="images/daisy.jpg" style="width:75%">
+
+
+```{r}
+library(tidyverse)
+```
+
+Direct link to About page:
+[about](about.html)
+
