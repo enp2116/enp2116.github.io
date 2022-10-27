@@ -1,5 +1,5 @@
 ---
-title: "plotly_and_flexdashboard"
+title: "plotly"
 author: "Emily Potts"
 date: "2022-10-27"
 output: html_document
@@ -80,9 +80,6 @@ box_ggplot =
 ggplotly(box_ggplot)
 ```
 
-## Flexdashboard
 
-```{r}
 
-```
 
