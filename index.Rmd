@@ -1,25 +1,17 @@
 ---
-title: "My awesome website"
+title: ""
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Emily's awesome website
+# Emily N Potts
+MS Candidate in Biostatistics at Columbia University Mailman School of Public Health
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+<img src="images/profile_photo.png" style="width:75%">
 
-Here's some text. I use [google](https://translate.google.com/) to do data science.
-
-This is a photo of Daisy:
-<img src="images/daisy.jpg" style="width:75%">
+Read more about me [here](about.html).
 
 
-```{r}
-library(tidyverse)
-```
-
-Direct link to About page:
-[about](about.html)
 
