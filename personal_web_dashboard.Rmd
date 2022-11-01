@@ -1,0 +1,54 @@
+---
+title: "personal_web_dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(plotly)
+library(tidyverse)
+library(p8105.datasets)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+Loading in the data:
+```{r}
+data("instacart")
+```
+
+### Chart A
+
+```{r}
+instacart %>% 
+group_by(aisle) %>%
+  summarize(
+    n_obs = n()) %>% 
+  filter(n_obs > 10000) %>% 
+  mutate(aisle = forcats::fct_reorder(aisle, n_obs, desc)) %>% mutate(text_label = str_c("Aisle Name: ", aisle, "\nNumber of Orders: ", n_obs)) %>% 
+  plot_ly(y = ~n_obs, x = ~aisle, type = "scatter", mode = "markers", text = ~text_label, alpha = 0.5) %>%
+  layout(title = 'Orders by Aisle', plot_bgcolor = "#e5ecf6", xaxis = list(title = 'Aisle Name'), 
+         yaxis = list(title = 'Number of Orders'), legend = list(title=list(text='<b> Species of Iris </b>')))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart %>% 
+  count() %>% 
+  mutate(neighbourhood = fct_reorder(neighbourhood, n)) 
+```
+
+### Chart C
+
+```{r}
+
+```
+
