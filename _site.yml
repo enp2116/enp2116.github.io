@@ -3,10 +3,12 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
+    - text: "CV"
+      href: ./images/cv_personal_web.pdf
     - text: "Dashboard"
       href: Flexdashboard.html
+    - icon: fa-brands fa-linkedin
+      href: https://www.linkedin.com/in/emilynoellepotts/
     - icon: fa-envelope fa-lg
       href: mailto:<enp2116@cumc.columbia.edu>
     - icon: fa-github fa-lg

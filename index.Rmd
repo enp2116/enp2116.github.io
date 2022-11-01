@@ -9,9 +9,11 @@ output:
 # Emily N Potts
 MS Candidate in Biostatistics at Columbia University Mailman School of Public Health
 
-<img src="images/profile_photo.png" style="width:75%">
+<img src="images/profile_photo.png" style="width:55%">
 
-Read more about me [here](about.html).
+Detail-oriented biostatistics graduate student in New York City, passionate about a data-driven approach to public health. Proficient in the R programming language for data analysis and visualization. Demonstrated flexibility in learning new programming languages relevant to statistical genetics and to industry. Currently serving as a teaching assistant for Introduction to Public Health.
+
+Read more about my academic and professional experience [here](./images/cv_personal_web.pdf).
 
 
 
