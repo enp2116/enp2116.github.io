@@ -23,7 +23,7 @@ data("instacart")
 
 ### Chart A
 
-```{r}
+```{r, echo=FALSE}
 instacart %>% 
 group_by(aisle) %>%
   summarize(
@@ -40,7 +40,7 @@ Column {data-width=600}
 
 ### Chart B
 
-```{r}
+```{r, echo=FALSE}
 instacart %>% 
 group_by(department) %>%
   summarize(
@@ -54,7 +54,7 @@ group_by(department) %>%
 
 ### Chart C
 
-```{r}
+```{r, echo=FALSE}
 instacart %>% 
     sample_n(400) %>%
   group_by(user_id) %>%
