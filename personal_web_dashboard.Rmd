@@ -1,5 +1,5 @@
 ---
-title: "personal_web_dashboard"
+title: "Instacart Dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -32,23 +32,35 @@ group_by(aisle) %>%
   mutate(aisle = forcats::fct_reorder(aisle, n_obs, desc)) %>% mutate(text_label = str_c("Aisle Name: ", aisle, "\nNumber of Orders: ", n_obs)) %>% 
   plot_ly(y = ~n_obs, x = ~aisle, type = "scatter", mode = "markers", text = ~text_label, alpha = 0.5) %>%
   layout(title = 'Orders by Aisle', plot_bgcolor = "#e5ecf6", xaxis = list(title = 'Aisle Name'), 
-         yaxis = list(title = 'Number of Orders'), legend = list(title=list(text='<b> Species of Iris </b>')))
+         yaxis = list(title = 'Number of Orders'))
 ```
 
-Column {data-width=350}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
 ### Chart B
 
 ```{r}
 instacart %>% 
-  count() %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) 
+group_by(department) %>%
+  summarize(
+    n_obs = n()) %>% 
+  mutate(department = forcats::fct_reorder(department, n_obs, desc)) %>% 
+  mutate(text_label = str_c("Department: ", department, "\nNumber of Orders: ", n_obs)) %>% 
+  plot_ly(x = ~department, y = ~n_obs, color = ~department, type = "bar", colors = "viridis") %>%
+  layout(title = 'Orders by Department', plot_bgcolor = "#e5ecf6", xaxis = list(title = 'Department Name'), 
+         yaxis = list(title = 'Number of Orders'))
 ```
 
 ### Chart C
 
 ```{r}
-
+instacart %>% 
+    sample_n(400) %>%
+  group_by(user_id) %>%
+  summarize(
+    avg_days_since_prior_order = mean(days_since_prior_order)) %>% 
+  plot_ly(y = ~avg_days_since_prior_order, type = 'box') %>%
+  layout(title = 'Average Days Since Prior Order per User', plot_bgcolor = "#e5ecf6", xaxis = list(title = ''), yaxis = list(title = 'Average Days Since Prior Order'))
 ```
 

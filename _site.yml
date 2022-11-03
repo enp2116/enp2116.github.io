@@ -6,7 +6,7 @@ navbar:
     - text: "CV"
       href: ./images/cv_personal_web.pdf
     - text: "Dashboard"
-      href: Flexdashboard.html
+      href: personal_web_dashboard.html
     - icon: fa-brands fa-linkedin
       href: https://www.linkedin.com/in/emilynoellepotts/
     - icon: fa-envelope fa-lg
