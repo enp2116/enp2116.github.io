@@ -11,7 +11,7 @@ MS Candidate in Biostatistics at Columbia University Mailman School of Public He
 
 <img src="images/profile_photo.png" style="width:55%">
 
-Detail-oriented biostatistics graduate student in New York City, passionate about a data-driven approach to public health. Proficient in the R programming language for data analysis and visualization. Demonstrated flexibility in learning new programming languages relevant to statistical genetics and to industry. Currently serving as a teaching assistant for Introduction to Public Health.
+Detail-oriented biostatistics graduate student in New York City, passionate about a data-driven approach to public health. Proficient in the R and SAS programming languages for data analysis and visualization, and SQL for executing queries and relational database management. Currently serving as a teaching assistant for Introduction to Public Health.
 
 Read more about my academic and professional experience [here](./images/cv_personal_web.pdf).
 
